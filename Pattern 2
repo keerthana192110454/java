@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class PatternProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number to be printed: ");
+        int numToPrint = scanner.nextInt();
+
+        System.out.print("Max Number of times printed: ");
+        int maxPrint = scanner.nextInt();
+
+        printPattern(numToPrint, maxPrint);
+    }
+
+    
+    static void printPattern(int num, int maxTimes) {
+        for (int i = 1; i <= maxTimes; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num);
+            }
+            System.out.println();
+        }
+
+        for (int i = maxTimes - 1; i > 0; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num);
+            }
+            System.out.println();
+        }
+    }
+}
